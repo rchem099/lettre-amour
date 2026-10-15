@@ -10,6 +10,21 @@ $('share').onclick=async()=>{const c=read();if(!c.text){$('status').textContent=
 function writeLetter(text,duration){
  const el=$('letter'),chars=Array.from(text),weights=chars.map(c=>c==='\n'?9:/[.!?…]/.test(c)?7:/[,;:]/.test(c)?3:1);
  const total=weights.reduce((a,b)=>a+b,0),unit=duration/total;
+ // Ces lignes prennent 30 % de temps en plus, sans accélérer le reste.
+ const slowerLines=new Set([
+  'Chère Tayna,', 'Mon amour,',
+  'Princesse de mon cœur, reine de ma vie,',
+  'Tu es mon âme sœur,', 'tu es ma meilleure amie,',
+  'tu es mon amour.', 'Je t’aime.'
+ ]);
+ let offset=0;
+ for(const line of text.split('\n')){
+  const length=Array.from(line).length;
+  if(slowerLines.has(line.trim())){
+   for(let i=offset;i<offset+length;i++) weights[i]*=1.3;
+  }
+  offset+=length+1;
+ }
  let index=0,elapsed=-3000,next=0,last=performance.now(),frame;
  el.textContent='';el.style.transform='translateY(0)';el.classList.remove('writing');
  const controller={playState:'running',pause(){this.playState='paused'},play(){if(this.playState==='paused'){this.playState='running';last=performance.now()}},cancel(){this.playState='idle';cancelAnimationFrame(frame);el.classList.remove('writing')}};

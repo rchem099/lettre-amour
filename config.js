@@ -1,5 +1,6 @@
 window.LETTER_CONFIG = {
-  text: `Chère Tayna, mon amour,
+  text: `Chère Tayna, 
+  Mon amour,
 Princesse de mon cœur, reine de ma vie,
 
 Ça fait exactement un an que j’ai pleuré de joie en demandant ta main en halal. Cette décision a été la meilleure de ma vie.
