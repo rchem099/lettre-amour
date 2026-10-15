@@ -11,7 +11,7 @@ Tu es mon âme sœur. Tu es la personne qui partage avec moi le pire et le meill
 
 De toute ma vie, je n’ai pas seulement cherché quelqu’un avec qui passer mes meilleurs moments, mais surtout quelqu’un qui serait là dans les pires. Et toi, mon cher amour, tu as été présente dans ma tristesse, comme tu as toujours été la raison de ma joie.
 
-Chère Tayna, j’espère passer le reste de ma vie avec toi. Je ne veux pas imaginer une vie sans toi.
+Chère Tayna, j’espère passer le reste de ma vie avec toi. Je ne veux pas d’une vie sans toi.
 
 Tu es mon âme sœur,
 tu es ma meilleure amie,
