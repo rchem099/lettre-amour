@@ -1,17 +1,23 @@
-// Personnalise ce fichier, puis enregistre-le et publie le projet.
 window.LETTER_CONFIG = {
-  // Remplace ce texte de démonstration par ta propre lettre.
-  text: `Mon amour,
+  text: `Chère Tayna, mon amour,
+Princesse de mon cœur, reine de ma vie,
 
-Ceci est un aperçu de notre lettre.
-Chaque mot apparaîtra doucement, comme une pensée que je te confie.
+Ça fait exactement un an que j’ai pleuré de joie en demandant ta main en halal. Cette décision a été la meilleure de ma vie.
 
-Remplace ce texte par les mots que tu souhaites lui offrir.
+Nous avons passé une année remplie d’émotions, de joie, d’amour, de sorties, de voyages, d’aventures, de stress, de tristesse, de bons et de mauvais moments.
 
-Avec tout mon amour.`,
-  // Ajoute ton fichier dans assets, puis indique : "assets/musique.mp3"
-  // Laisse vide pour le moment : la lettre fonctionne aussi sans musique.
+Tu es mon âme sœur. Tu es la personne qui partage avec moi le pire et le meilleur de ma vie, et cela fait de toi ma personne préférée.
+
+De toute ma vie, je n’ai pas seulement cherché quelqu’un avec qui passer mes meilleurs moments, mais surtout quelqu’un qui serait là dans les pires. Et toi, mon cher amour, tu as été présente dans ma tristesse, comme tu as toujours été la raison de ma joie.
+
+Chère Tayna, j’espère passer le reste de ma vie avec toi. Je ne veux pas imaginer une vie sans toi.
+
+Tu es mon âme sœur,
+tu es ma meilleure amie,
+tu es mon amour.
+
+Je t’aime.`,
+
   music: "",
-  // Durée de l’écriture en secondes, hors introduction et dernières secondes.
-  duration: 90
+  duration: 120
 };
