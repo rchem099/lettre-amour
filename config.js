@@ -18,6 +18,6 @@ tu es mon amour.
 
 Je t’aime.`,
 
-  music: "",
+  music: "assets/musique.mp3",
   duration: 120
 };
