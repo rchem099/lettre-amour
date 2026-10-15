@@ -10,12 +10,12 @@ $('share').onclick=async()=>{const c=read();if(!c.text){$('status').textContent=
 function writeLetter(text,duration){
  const el=$('letter'),chars=Array.from(text),weights=chars.map(c=>c==='\n'?9:/[.!?…]/.test(c)?7:/[,;:]/.test(c)?3:1);
  const total=weights.reduce((a,b)=>a+b,0),unit=duration/total;
- let index=0,elapsed=-1400,next=0,last=performance.now(),frame;
- el.textContent='';el.style.transform='translateY(0)';el.classList.add('writing');
+ let index=0,elapsed=-10000,next=0,last=performance.now(),frame;
+ el.textContent='';el.style.transform='translateY(0)';el.classList.remove('writing');
  const controller={playState:'running',pause(){this.playState='paused'},play(){if(this.playState==='paused'){this.playState='running';last=performance.now()}},cancel(){this.playState='idle';cancelAnimationFrame(frame);el.classList.remove('writing')}};
  function tick(now){const delta=now-last;last=now;if(controller.playState==='running'){
  elapsed+=Math.min(delta,100);let changed=false;while(index<chars.length&&elapsed>=next){el.textContent+=chars[index];next+=weights[index]*unit;index++;changed=true}
- if(changed){const visible=innerHeight*.58;el.style.transform=`translateY(-${Math.max(0,el.scrollHeight-innerHeight*.3-visible)}px)`}
+ if(changed){el.classList.add('writing');const visible=innerHeight*.58;el.style.transform=`translateY(-${Math.max(0,el.scrollHeight-innerHeight*.3-visible)}px)`}
  if(index===chars.length&&elapsed>next+3000){controller.playState='finished';el.classList.remove('writing');$('pause').textContent='Terminé';$('pause').setAttribute('aria-label','Écriture terminée');return}
  }if(controller.playState!=='idle')frame=requestAnimationFrame(tick)}frame=requestAnimationFrame(tick);return controller
 }

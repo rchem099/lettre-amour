@@ -5,7 +5,7 @@ const configuration = document.createElement('script');
 configuration.src = 'config.js?v=' + Date.now();
 configuration.onload = () => {
   const application = document.createElement('script');
-  application.src = 'script.js?v=2';
+  application.src = 'script.js?v=3';
   document.body.appendChild(application);
 };
 configuration.onerror = () => {
